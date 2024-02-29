@@ -1,63 +1,114 @@
 openapi: "3.1.0"
 info:
-  title: "A getting started API"
+  title: "StackOne Unified API"
   version: "1.0.0"
+  description: Return transformed employee data from Bamboo Hr API
 servers:
-  - url: "http://localhost:3000"
+  - url: "/"
 paths:   
-  /users:
+  /employees:
     get:
-      operationId: getUsers
-      summary: "Get a list of users"
+      parameters:
+      - in: query
+        name: api_key
+        required: true
+        schema:
+          type: string
+        description: The users api key
+      - in: query
+        name: offset
+        required: false
+        schema:
+          type: integer
+        description: The number of items to skip before starting to collect the result set
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        description: The numbers of items to return
+      tags:
+          - Employees
+      operationId: getEmployees
+      summary: "Get a list of employees with user information"
       responses:
         '200':
           description: "Successful response"
           content:
             application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
               example:
                 - id: "1"
                   first_name: "John"
                   last_name: "Doe"
                   name: "John Doe"
                   display_name: "JohnD"
-                  email: "john.doe@example.com"
+                  work_email: "john.doe@example.com"
                   date_of_birth: "1990-01-01"
                   avatar_url: "https://example.com/avatar.jpg"
                   personal_phone_number: "123-456-7890"
                   work_email: "john.doe@work.com"
+                  job_title: "HR Manager"
+                  department: "Human Resources"
+                  manager_id: 6
+                  start_date: "2023-03-10"
+                  tenure: 0
+                  work_anniversary: "2024-03-10"
 components:
   schemas:
-    User:
-      required: ["id", "first_name", "last_name", "name", "display_name", "email"]
+    Employee:
+      required: ["id", "first_name", "last_name", "name", "display_name", "personal_phone_number", "work_email", "department"]
       type: "object"
       properties:
         id:
           type: "string"
-          description: "The user's unique identifier"
+          description: "The employee's unique identifier"
         first_name:
           type: "string"
-          description: "The user's first name"
+          description: "The employee's first name"
         last_name:
           type: "string"
-          description: "The user's last name"
+          description: "The employee's last name"
         name:
           type: "string"
-          description: "The user's preferred name"
+          description: "The employee's preferred name"
         display_name:
           type: "string"
-          description: "The user's preferred display name"
+          description: "The employee's preferred display name"
         email:
           type: "string"
           description: "Email address"
         date_of_birth:
-          type: "date"
-          description: The user's date of birth
+          type: "string"
+          format: "date"
+          description: "The employee's date of birth"
         avatar_url:
-          type: string
-          description: The user's avatar photo
+          type: "string"
+          description: "The employee's avatar photo"
         personal_phone_number:
-          type: string
-          description: The user's phone number
+          type: "string"
+          description: "The employee's phone number"
         work_email: 
-          type: string
-          description: The user's work email
+          type: "string"
+          description: "The employee's work email"
+        job_title:
+          type: "string"
+          description: "The employee's job title"
+        department: 
+          type: "string"
+          description: "The employee's department"
+        manager_id:
+          type: "number"
+          description: "The unique identifier of the employee's manager"
+        start_date:
+          type: "string"
+          format: "date"
+          description: "The employee's start date"
+        tenure:
+          type: "number"
+          description: "The number of years the employee has been at the business"
+        work_anniversary:
+          type: "string"
+          format: "date"
+          description: "The employee's next work anniversary"

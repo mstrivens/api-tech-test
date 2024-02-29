@@ -5,6 +5,7 @@ export type BambooHrEmployee = {
     name: string
     firstName: string
     lastName: string
+    displayName: string
     preferredName?: string
     jobTitle: string
     workPhone: string
@@ -23,7 +24,13 @@ export type BambooHrEmployee = {
     canUploadPhoto: number
 }
 
-export type BambooApiResponse = ApiResponse & {
+export type HydratedBambooHrEmployee = BambooHrEmployee & {
+    hireDate?: Date
+    supervisorId: number
+    dateOfBirth: Date
+}
+
+export type BambooEmployeeDirectoryResponse = ApiResponse & {
     fields: Array<{[key: string]: unknown}>
     employees: Array<BambooHrEmployee>
 }

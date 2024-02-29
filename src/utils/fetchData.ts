@@ -1,7 +1,7 @@
 import axios, {AxiosResponse, AxiosError} from 'axios';
 
 export interface ApiResponse {
-    [key: string]: Array<any>;
+    [key: string]: Array<any> | any;
   }
 export const fetchData = async (url: string): Promise<ApiResponse> => {
     try {
@@ -10,9 +10,8 @@ export const fetchData = async (url: string): Promise<ApiResponse> => {
         return data
     } catch (e: AxiosError | unknown) {
         if (e instanceof AxiosError) {
-            console.log(e.response)
+            throw e.response
         }
-        console.log(e)
         throw e;
     }
 }

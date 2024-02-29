@@ -9,8 +9,8 @@ export interface Employee {
     personal_phone_number: string;
     work_email: string;
     job_title?: string;
-    department?: string;
-    manager_id?: string;
+    department: string;
+    manager_id?: number;
     start_date?: Date;
     tenure?: number;
     work_anniversary?: Date;
