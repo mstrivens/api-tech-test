@@ -37,13 +37,19 @@ The ```API_KEY``` is available to pass in as a query param but you can set here 
 
 ### GET Employees
 
-Provides list of employees - api_key is required
+Provides list of employees
+
+#### Required
+
+```api_key```
+
+#### Example Request:
 
 ```localhost:3000?api_key={your_api_key}```
 
-```
-Example Response:
+#### Example Response:
 
+```
 [
   {
     "id": "1",
@@ -65,21 +71,19 @@ Example Response:
 
 The GET employees endpoint supports pagination using the following query params:
 
-```
-offset={integer}
-```
-```
-limit={integer}
-```
+### Offset
 
 offset = The number of items to skip before starting to collect the result set
+```offset={integer}```
+
+### Limit
 
 limit = The numbers of items to return
-
+```limit={integer}```
 
 ## Docs
 
 Comprehensive documentation on API request and expected response
 
-```{root_url}/api-docs```
+```localhost:3000/api-docs```
 
