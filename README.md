@@ -46,7 +46,7 @@ Provides list of employees
 
 #### Required
 
-```api_key```
+```api_key``` as a query param if not set in the ```.env``` file
 
 This corresponds to the ```API_KEY``` provided by Bamboo Hr for the user
 
