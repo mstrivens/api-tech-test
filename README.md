@@ -2,22 +2,46 @@
 
 ### NPM
 
-```npm install```
-
-### Yarn
-
-```yarn install`
-
-## Example Usage
-
-GET Employees
-
-Provides list of employees
+```
+npm install
+npm run dev
 
 ```
 
-{root_url}?api_key{your_api_key}
+### Yarn
 
+```
+yarn install
+yarn run dev
+```
+
+### Environment Variables
+
+You can set the following environment variables as per the ```.example.env``` file:
+
+### Required
+#### SUBDOMAIN=
+
+The ```SUBDOMAIN``` must be set to the domain of the users Bamboo Hr ```companyDomain```
+
+### Not Required
+#### PORT=
+
+The ```PORT``` will default to 3000 if not set
+
+#### API_KEY=
+
+The ```API_KEY``` is available to pass in as a query param but you can set here for development
+
+## Example Usage
+
+### GET Employees
+
+Provides list of employees - api_key is required
+
+```localhost:3000?api_key={your_api_key}```
+
+```
 Example Response:
 
 [
@@ -41,16 +65,21 @@ Example Response:
 
 The GET employees endpoint supports pagination using the following query params:
 
-```offset={integer}```
-```limit={integer}```
+```
+offset={integer}
+```
+```
+limit={integer}
+```
 
 offset = The number of items to skip before starting to collect the result set
+
 limit = The numbers of items to return
 
 
 ## Docs
 
-Documentation on API request and expected response
+Comprehensive documentation on API request and expected response
 
 ```{root_url}/api-docs```
 
