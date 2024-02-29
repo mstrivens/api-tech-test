@@ -5,7 +5,6 @@
 ```
 npm install
 npm run dev
-
 ```
 
 ### Yarn
@@ -33,6 +32,12 @@ The ```PORT``` will default to 3000 if not set
 
 The ```API_KEY``` is available to pass in as a query param but you can set here for development
 
+## Docs
+
+### Comprehensive documentation on API request and expected response
+
+```localhost:3000/api-docs```
+
 ## Example Usage
 
 ### GET Employees
@@ -42,6 +47,8 @@ Provides list of employees
 #### Required
 
 ```api_key```
+
+This corresponds to the ```API_KEY``` provided by Bamboo Hr for the user
 
 #### Example Request:
 
@@ -57,14 +64,18 @@ Provides list of employees
     "last_name": "Doe",
     "name": "John Doe",
     "display_name": "JohnD",
-    "email": "john.doe@example.com",
+    "work_email": "john.doe@work.com",
     "date_of_birth": "1990-01-01",
     "avatar_url": "https://example.com/avatar.jpg",
     "personal_phone_number": "123-456-7890",
-    "work_email": "john.doe@work.com"
+    "job_title": "HR Manager",
+    "department": "Human Resources",
+    "manager_id": 6,
+    "start_date": "2023-03-10",
+    "tenure": 0,
+    "work_anniversary": "2024-03-10"
   }
 ]
-
 ```
 
 ## Pagination
@@ -80,10 +91,4 @@ The GET employees endpoint supports pagination using the following query params:
 
 #### The numbers of items to return
 ```limit={integer}```
-
-## Docs
-
-### Comprehensive documentation on API request and expected response
-
-```localhost:3000/api-docs```
 

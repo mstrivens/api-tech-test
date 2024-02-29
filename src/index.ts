@@ -39,8 +39,9 @@ initialize({
         "offset": typeof req.query.offset === "number" ? parseInt(req.query?.offset) : undefined,
         "limit": typeof req.query.limit === "number" ? parseInt(req.query?.limit) : undefined,
       }
+      const requestUrl = `https://${api_key || process.env.API_KEY}:x@api.bamboohr.com/api/gateway.php/${process.env.SUBDOMAIN}/v1/employees/directory`
       try {
-        const employees: Array<BambooHrEmployee> = await fetchBambooEmployeeData({url: `https://${api_key || process.env.API_KEY}:x@api.bamboohr.com/api/gateway.php/${process.env.SUBDOMAIN}/v1/employees/directory`, ...params})
+        const employees: Array<BambooHrEmployee> = await fetchBambooEmployeeData({url: requestUrl, ...params})
         const hydratedEmployeeObject: Array<HydratedBambooHrEmployee> = await fetchAdditionalEmployeeData(employees)
         const transformedData = transformData(hydratedEmployeeObject)
         res.send(transformedData)
