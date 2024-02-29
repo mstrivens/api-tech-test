@@ -73,17 +73,17 @@ The GET employees endpoint supports pagination using the following query params:
 
 ### Offset
 
-offset = The number of items to skip before starting to collect the result set
+#### The number of items to skip before starting to collect the result set
 ```offset={integer}```
 
 ### Limit
 
-limit = The numbers of items to return
+#### The numbers of items to return
 ```limit={integer}```
 
 ## Docs
 
-Comprehensive documentation on API request and expected response
+### Comprehensive documentation on API request and expected response
 
 ```localhost:3000/api-docs```
 
