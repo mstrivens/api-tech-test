@@ -60,20 +60,20 @@ This corresponds to the ```API_KEY``` provided by Bamboo Hr for the user
 [
   {
     "id": "1",
-    "first_name": "John",
-    "last_name": "Doe",
+    "firstName": "John",
+    "lastName": "Doe",
     "name": "John Doe",
-    "display_name": "JohnD",
-    "work_email": "john.doe@work.com",
-    "date_of_birth": "1990-01-01",
-    "avatar_url": "https://example.com/avatar.jpg",
-    "personal_phone_number": "123-456-7890",
-    "job_title": "HR Manager",
+    "displayName": "JohnD",
+    "workEmail": "john.doe@work.com",
+    "dateOfBirth": "1990-01-01",
+    "avatarUrl": "https://example.com/avatar.jpg",
+    "personalPhoneNumber": "123-456-7890",
+    "jobTitle": "HR Manager",
     "department": "Human Resources",
-    "manager_id": 6,
-    "start_date": "2023-03-10",
+    "managerId": 6,
+    "startDate": "2023-03-10",
     "tenure": 0,
-    "work_anniversary": "2024-03-10"
+    "workAnniversary": "2024-03-10"
   }
 ]
 ```

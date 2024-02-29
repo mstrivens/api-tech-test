@@ -1,17 +1,17 @@
 export interface Employee {
     id: string;
-    first_name: string;
-    last_name: string;
+    firstName: string;
+    lastName: string;
     name: string;
-    display_name: string;
-    date_of_birth?: Date;
-    avatar_url?: string;
-    personal_phone_number: string;
-    work_email: string;
-    job_title?: string;
+    displayName: string;
+    dateOfBirth?: Date;
+    avatarUrl?: string;
+    personalPhoneNumber: string;
+    workEmail: string;
+    jobTitle?: string;
     department: string;
-    manager_id?: number;
-    start_date?: Date;
+    managerId?: number;
+    startDate?: Date;
     tenure?: number;
-    work_anniversary?: Date;
+    workAnniversary?: Date;
 }

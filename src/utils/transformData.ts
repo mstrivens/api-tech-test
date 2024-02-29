@@ -7,18 +7,18 @@ export const transformData = (employees: Array<HydratedBambooHrEmployee> ): Arra
         transformedEmployees.push(
         {
             id: employee.id,
-            first_name: employee.firstName,
-            last_name: employee.lastName,
+            firstName: employee.firstName,
+            lastName: employee.lastName,
             name: employee.name,
-            display_name: employee.displayName,
-            date_of_birth: employee.dateOfBirth,
-            avatar_url: employee.photoUrl,
-            personal_phone_number: employee.mobilePhone,
-            work_email: employee.workEmail,
-            job_title: employee.jobTitle,
+            displayName: employee.displayName,
+            dateOfBirth: employee.dateOfBirth,
+            avatarUrl: employee.photoUrl,
+            personalPhoneNumber: employee.mobilePhone,
+            workEmail: employee.workEmail,
+            jobTitle: employee.jobTitle,
             department: employee.department,
-            manager_id: employee.supervisorId,
-            start_date: employee.hireDate
+            managerId: employee.supervisorId,
+            startDate: employee.hireDate
             // work_anniversary?: Date;
             // tenure?: number;
         })

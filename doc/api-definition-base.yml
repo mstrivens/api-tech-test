@@ -40,21 +40,21 @@ paths:
                 $ref: '#/components/schemas/Employee'
               example:
                 - id: "1"
-                  first_name: "John"
-                  last_name: "Doe"
+                  firstName: "John"
+                  lastName: "Doe"
                   name: "John Doe"
-                  display_name: "JohnD"
-                  work_email: "john.doe@example.com"
-                  date_of_birth: "1990-01-01"
-                  avatar_url: "https://example.com/avatar.jpg"
-                  personal_phone_number: "123-456-7890"
-                  work_email: "john.doe@work.com"
-                  job_title: "HR Manager"
+                  displayName: "JohnD"
+                  workEmail: "john.doe@example.com"
+                  dateOfBirth: "1990-01-01"
+                  avatarUrl: "https://example.com/avatar.jpg"
+                  personalPhoneNumber: "123-456-7890"
+                  workEmail: "john.doe@work.com"
+                  jobTitle: "HR Manager"
                   department: "Human Resources"
-                  manager_id: 6
-                  start_date: "2023-03-10"
+                  managerId: 6
+                  startDate: "2023-03-10"
                   tenure: 0
-                  work_anniversary: "2024-03-10"
+                  workAnniversary: "2024-03-10"
 components:
   schemas:
     Employee:
@@ -64,51 +64,51 @@ components:
         id:
           type: "string"
           description: "The employee's unique identifier"
-        first_name:
+        firstName:
           type: "string"
           description: "The employee's first name"
-        last_name:
+        lastName:
           type: "string"
           description: "The employee's last name"
         name:
           type: "string"
           description: "The employee's preferred name"
-        display_name:
+        displayName:
           type: "string"
           description: "The employee's preferred display name"
         email:
           type: "string"
           description: "Email address"
-        date_of_birth:
+        dateOfBirth:
           type: "string"
           format: "date"
           description: "The employee's date of birth"
-        avatar_url:
+        avatarUrl:
           type: "string"
           description: "The employee's avatar photo"
-        personal_phone_number:
+        personalPhoneNumber:
           type: "string"
           description: "The employee's phone number"
-        work_email: 
+        workEmail: 
           type: "string"
           description: "The employee's work email"
-        job_title:
+        jobTitle:
           type: "string"
           description: "The employee's job title"
         department: 
           type: "string"
           description: "The employee's department"
-        manager_id:
+        managerId:
           type: "number"
           description: "The unique identifier of the employee's manager"
-        start_date:
+        startDate:
           type: "string"
           format: "date"
           description: "The employee's start date"
         tenure:
           type: "number"
           description: "The number of years the employee has been at the business"
-        work_anniversary:
+        workAnniversary:
           type: "string"
           format: "date"
           description: "The employee's next work anniversary"
