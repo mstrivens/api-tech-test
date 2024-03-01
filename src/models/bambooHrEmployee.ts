@@ -28,6 +28,9 @@ export type HydratedBambooHrEmployee = BambooHrEmployee & {
     hireDate?: Date
     supervisorId: number
     dateOfBirth: Date
+    supervisorFirstName: string
+    supervisorLastName: string
+    supervisorJobTitle: string
 }
 
 export type BambooEmployeeDirectoryResponse = ApiResponse & {
