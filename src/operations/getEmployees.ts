@@ -54,7 +54,7 @@ async function fetchAdditionalEmployeeData(employeesList: Array<BambooHrEmployee
 }
 
 const transformData = (employees: Array<HydratedBambooHrEmployee> ): Array<Employee> => {
-  const transformedEmployees = []
+  const transformedEmployees: Array<Employee> = []
   for (const employee of employees) {
       transformedEmployees.push(
       {

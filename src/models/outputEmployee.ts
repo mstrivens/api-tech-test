@@ -14,4 +14,8 @@ export interface Employee {
     startDate?: Date;
     tenure?: number;
     workAnniversary?: Date;
+    managerFirstName: string;
+    managerLastName: string;
+    managerJobTitle: string;
+    
 }
