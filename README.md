@@ -38,7 +38,7 @@ The ```API_KEY``` is available to pass in as a query param but you can set here 
 
 ## Docs
 
-### Comprehensive documentation on API requests, routes and expected responses
+### Comprehensive documentation on API requests, routes and expected responses with Swagger UI
 
 ```localhost:3000/api-docs```
 
