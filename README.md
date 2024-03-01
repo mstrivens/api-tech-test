@@ -4,6 +4,11 @@
 
 ```
 npm install
+```
+
+#### Create .env file with SUBDOMAIN set to your bamboo domain (see below)
+
+```
 npm run dev
 ```
 
@@ -11,6 +16,11 @@ npm run dev
 
 ```
 yarn install
+```
+
+#### Create .env file with SUBDOMAIN set to your bamboo domain (see below)
+
+```
 yarn run dev
 ```
 
