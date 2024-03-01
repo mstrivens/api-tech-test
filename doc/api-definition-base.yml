@@ -55,10 +55,13 @@ paths:
                   startDate: "2023-03-10"
                   tenure: 0
                   workAnniversary: "2024-03-10"
+                  managerFirstName: "Jane"
+                  managerLastName: "Doe"
+                  managerJobTitle: "HR Director"
 components:
   schemas:
     Employee:
-      required: ["id", "first_name", "last_name", "name", "display_name", "personal_phone_number", "work_email", "department"]
+      required: ["id", "firstName", "lastName", "name", "displayName", "personalPhoneNumber", "workEmail", "department"]
       type: "object"
       properties:
         id:
@@ -112,3 +115,12 @@ components:
           type: "string"
           format: "date"
           description: "The employee's next work anniversary"
+        managerFirstName:
+          type: "string"
+          description: "The first name of the employee's manager"
+        managerLastName:
+          type: "string"
+          description: "The last name of the employee's manager"
+        managerJobTitle:
+          type: "string"
+          description: "The job title of the employee's manager"

@@ -10,17 +10,17 @@ type ParamsObject = {
 } 
 
 export async function getEmployees(req: Request, res: Response): Promise<any> {
-  const api_key =  typeof req.query.api_key === "string" ? req.query.api_key : ""
-  const BAMBOO_ROOT_URL = `https://${api_key || process.env.API_KEY}:x@api.bamboohr.com/api/gateway.php/${process.env.SUBDOMAIN}/v1/employees/`
+  const API_KEY =  typeof req.query.api_key === "string" ? req.query.api_key : ""
+  const BAMBOO_ROOT_URL = `https://${API_KEY || process.env.API_KEY}:x@api.bamboohr.com/api/gateway.php/${process.env.SUBDOMAIN}/v1/employees/`
   const params: ParamsObject = {
     "offset": typeof req.query.offset === "number" ? parseInt(req.query?.offset) : undefined,
     "limit": typeof req.query.limit === "number" ? parseInt(req.query?.limit) : undefined,
   }
   try {
-    const employees: Array<BambooHrEmployee> = await fetchBambooEmployeeData({url: BAMBOO_ROOT_URL + 'directory', ...params})
-    const hydratedEmployeeObject: Array<HydratedBambooHrEmployee> = await fetchAdditionalEmployeeData(employees, BAMBOO_ROOT_URL)
-    const transformedData = transformData(hydratedEmployeeObject)
-    res.send(transformedData)
+    const bambooEmployeeData: Array<BambooHrEmployee> = await fetchBambooEmployeeData({url: BAMBOO_ROOT_URL + 'directory', ...params})
+    const hydratedBambooEmployeeData: Array<HydratedBambooHrEmployee> = await fetchAdditionalEmployeeData(bambooEmployeeData, BAMBOO_ROOT_URL)
+    const transformedEmployeeData = transformData(hydratedBambooEmployeeData)
+    res.send(transformedEmployeeData)
   } catch(e) {
     res.send(e)
   }
