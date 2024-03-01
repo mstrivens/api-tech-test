@@ -2,25 +2,19 @@
 
 ### NPM
 
+- Create .env file with SUBDOMAIN set to your bamboo domain (see below)
+
 ```
 npm install
-```
-
-#### Create .env file with SUBDOMAIN set to your bamboo domain (see below)
-
-```
 npm run dev
 ```
 
 ### Yarn
 
+- Create .env file with SUBDOMAIN set to your bamboo domain (see below)
+
 ```
 yarn install
-```
-
-#### Create .env file with SUBDOMAIN set to your bamboo domain (see below)
-
-```
 yarn run dev
 ```
 
